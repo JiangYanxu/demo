@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.15)
+project(demo)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/.runtime)
+set(J_PC_NAME $ENV{J_PC_NAME})
+
+if(${J_PC_NAME} STREQUAL "HXZBook_HyperV_Ubuntu2204")
+    message(STATUS "Project on *${J_PC_NAME}*")
+    list(APPEND CMAKE_PREFIX_PATH "/home/jiangyx/Qt/5.15.2/gcc_64")
+else()
+    message(FATAL_ERROR "Unknown PC! *${J_PC_NAME}*")
+endif()
+
+add_subdirectory(flex_bison_demo)
+add_subdirectory(gloabl_obj_in_static_lib)

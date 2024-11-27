@@ -1,0 +1,9 @@
+
+# == Build Dir ==
+build
+**/build
+**/.build
+**/.runtime
+**/.build_qmake
+**/*.pro.user*
+
