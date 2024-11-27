@@ -1,0 +1,7 @@
+#ifndef CONFIG_HPP
+#define CONFIG_HPP
+
+#define VERTEX_PATH "@VERTEX_PATH@"
+#define FRAGMENT_PATH "@FRAGMENT_PATH@"
+
+#endif // CONFIG_HPP

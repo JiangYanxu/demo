@@ -2,6 +2,11 @@
 ## 目的
 *   记录每个demo中的过程或知识点
 *   doc文件夹是总结性的文档
+## todo
+* plantuml 需要补充一个操作记录的文档。
+* learn_qxorm_manual 目前是mingw，改成msvc，并且总结一下。或让这个顶层项目适应mingw。
+* LearnOpenGL 缺笔记，需要整理。
+* 研究完QxOrm再来搞QxEntityEditor。
 
 ## Flex与Bison的尝试（flex_bison_demo）
 ### 知识点

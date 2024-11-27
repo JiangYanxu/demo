@@ -7,3 +7,4 @@ build
 **/.build_qmake
 **/*.pro.user*
 
+QxEntityEditor
