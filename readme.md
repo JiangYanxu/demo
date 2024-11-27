@@ -1,6 +1,7 @@
 # 记录
 ## 目的
 *   记录每个demo中的过程或知识点
+*   doc文件夹是总结性的文档
 
 ## Flex与Bison的尝试（flex_bison_demo）
 ### 知识点
