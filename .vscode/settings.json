@@ -1,5 +1,8 @@
 {
     "files.exclude": {
         "build": true,
+        "cmake_template": true,
+        "flex_bison_demo": true,
+        "gloabl_obj_in_static_lib": true,
     }
 }
