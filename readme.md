@@ -7,6 +7,22 @@
 * learn_qxorm_manual 目前是mingw，改成msvc，并且总结一下。或让这个顶层项目适应mingw。
 * LearnOpenGL 缺笔记，需要整理。
 * 研究完QxOrm再来搞QxEntityEditor。
+* 3D打印，OpenSCAD
+* 键盘固件：电源模块、蓝牙模块
+  * nasm 汇编
+* CMake 高级技巧
+  * 交叉编译
+  * 除了mingw还有什么? `llvm`; `msys2`; `cygwin`
+    * 异常实现方式？
+* 试试各种库
+  * C++ 日志库：`log4qt`; `log4cplus`; `log4cpp`
+  * OpenSSL、zlib、boost
+* 线性代数 - OpenGL - OpenCV
+* gitmind中整理过来、还有其他笔记、幕布、WorkFlowy
+* 路由、nas
+
+
+
 
 ## Flex与Bison的尝试（flex_bison_demo）
 ### 知识点
