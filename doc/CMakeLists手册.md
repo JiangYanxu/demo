@@ -19,6 +19,12 @@ project(demo VERSION 1.0.0 DESCRIPTION "This is a demo project")
 # message(FATAL_ERROR "Unsupported system")
 # endif()
 
+# if (EXISTS ${CMAKE_SOURCE_DIR}/Tranport)
+#     add_subdirectory(Tranport)
+# else()
+#     include(Transport.cmake)
+# endif()
+
 # list(APPEND CMAKE_MODULE_PATH /home/user/xxx)
 # list(APPEND CMAKE_PREFIX_PATH /home/user/xxx)
 
