@@ -1,6 +1,9 @@
 # CMakeLists手册
 ## 目的
-* 记录在各种场景下我能用到的`CMakeList.txt`的技巧
+*   记录在各种场景下我能用到的`CMakeList.txt`的技巧
+### todo
+*   研究研财产，dll由财产拷贝
+*   `cmake_install_demo`还应该研究研究bin/config怎么`install`.
 
 ## 不言自明
 ```cmake
@@ -56,6 +59,31 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
 )
 add_custom_target()
 ```
+### cmake脚本
+```cmake
+# Include Once
+if(NOT ROOT_CMAKE_CONFIG_FILE_INCLUDED)
+set(ROOT_CMAKE_CONFIG_FILE_INCLUDED TRUE)
+
+# 脚本位置
+file(REAL_PATH ${CMAKE_CURRENT_LIST_DIR} MY_ROOT)
+
+# OUTPUT DIRECTORY
+set(MY_OUTPUT_DIRECTORY ${MY_ROOT}/build CACHE STRING "Output directory for build")
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${MY_OUTPUT_DIRECTORY}/archive)
+set(CMAKE_PDB_OUTPUT_DIRECTORY ${MY_OUTPUT_DIRECTORY}/pdb)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${MY_OUTPUT_DIRECTORY}/runtime)
+set(CMAKE_COMPILE_PDB_OUTPUT_DIRECTORY ${MY_OUTPUT_DIRECTORY}/compile)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${MY_OUTPUT_DIRECTORY}/library)
+
+# INSTALL DIRECTORY
+include(GNUInstallDirs)
+set(CMAKE_INSTALL_PREFIX ${MY_ROOT}/install CACHE STRING "Install directory" FORCE)
+
+endif() # ROOT_CMAKE_CONFIG_FILE_INCLUDED 
+```
+### [install](https://cmake.org/cmake/help/latest/command/install.html)
 ## 有用的变量
 *   `${CMAKE_BUILD_TYPE}` 构建类型: `Debug`, `Release`
 *   `${CMAKE_SYSTEM}` 系统类型

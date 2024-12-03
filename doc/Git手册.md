@@ -30,3 +30,13 @@
     1.  在A上添加裸仓库：`git remote add bare ../bare/proj.git`
     1.  在A上拉取：`git pull bare master`
 *   思路：在A上创建裸仓库，A上的仓库负责更新裸仓库。B从裸仓库获取github上的最新代码。B对代码进行修改，更新到裸仓库上。由A从裸仓库拉取最新代码，并提交到github。
+#### 引用QxOrm子模块
+希望引用QxOrm的子模块到项目里来。
+```bash
+git submodule add https://github.com/QxOrm/QxOrm.git library/QxOrm
+cd library/QxOrm
+git checkout 1.5.0 # 选择版本
+cd ..
+git add library/QxOrm
+git commit -m "add QxOrm submodule version 1.5.0"
+```
