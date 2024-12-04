@@ -21,6 +21,11 @@ project(demo VERSION 1.0.0 DESCRIPTION "This is a demo project")
 # else()
 # message(FATAL_ERROR "Unsupported system")
 # endif()
+# if (WIN32)
+#     if (MSVC)
+#     elseif(MINGW)
+#     endif()
+# endif()
 
 # if (EXISTS ${CMAKE_SOURCE_DIR}/Tranport)
 #     add_subdirectory(Tranport)
@@ -92,6 +97,7 @@ endif() # ROOT_CMAKE_CONFIG_FILE_INCLUDED
 *   `${CMAKE_C_COMPILER} ${CMAKE_CXX_COMPILER}` 编译器路径
 *   `${CMAKE_INSTALL_PREFIX}` 安装路径
 *   `${CMAKE_SIZEOF_VOID_P}` 指针大小
+*   `${CMAKE_VERBOSE_MAKEFILE}` 是否显示详细的编译信息: `ON`, `OFF`
 ## 命令行
 *   `--system-information` 输出系统信息
     *   `cmake -G "MinGW Makefiles" --system-information "MinGW System Information.txt"`
@@ -148,3 +154,10 @@ add_custom_target(graphviz
 我试图在环境变量里添加`J_PC_NAME`环境变量（在`~/.bashrc`文件末尾追加`export J_PC_NAME=xxx`）
 用以在CMake项目中区分不同的计算机（环境）
 但是我发现重启vscode后，cmake读不到变更。查了一下，是跑在linux上`vscode-server`程序未重启导致的。
+#### 静态库链接失败（感觉像是CMake的Bug）
+GCC对链接顺序有要求
+gcc -o bin -lQxOrm -lQt5::Sql -lQt5::Core 不会报错。
+gcc -o bin -lQt5::Sql -lQt5::Core -lQxOrm 则会报错。
+需要调整target_link_libraries的顺序
+但是针对接口库，调整target_link_libraries的顺序对链接顺序的影响不符合直觉。
+解决思路：`set(CMAKE_VERBOSE_MAKEFILE ON)`，去构建查看命令，再去文件夹里看顺序。

@@ -4,5 +4,13 @@
         "cmake_template": true,
         "flex_bison_demo": true,
         "gloabl_obj_in_static_lib": true,
-    }
+        "library/QxOrm/{[!t]*,?[!e]*}" : true, // 第一位不是t，第二位不是e
+        "library/QxOrm/test/build" : true,
+        "library/QxOrm/test/**/{*.sln,*.pro,*.vcxproj,*.vcxproj.filters,debug,qt,release}" : true,
+        "library/QxOrm_1_5_0/lib*" : true,
+    },
+    // "cmake.configureArgs": [
+    //     "-D_QX_STATIC_BUILD=ON",
+    //     "-D_QX_UNITY_BUILD=ON"
+    // ]
 }

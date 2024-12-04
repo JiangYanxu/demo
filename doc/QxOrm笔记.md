@@ -1,5 +1,26 @@
 # 笔记
 ## 学到了什么？
+### cmake
+```bash
+# MinGW Debug Build
+cmake -D_QX_STATIC_BUILD=ON -D_QX_UNITY_BUILD=ON -DCMAKE_BUILD_TYPE=Debug -S . -B build_mingw -G "MinGW Makefiles"
+cmake --build build_mingw --config Debug -j 22
+cmake --install build_mingw --prefix "../QxOrm_1_5_0" --config Debug
+# MinGW Release Build
+cmake -D_QX_STATIC_BUILD=ON -D_QX_UNITY_BUILD=ON -DCMAKE_BUILD_TYPE=Release -S . -B build_mingw -G "MinGW Makefiles"
+cmake --build build_mingw --config Release -j 22
+cmake --install build_mingw --prefix "../QxOrm_1_5_0" --config Release
+# MSVC Debug Build
+cmake -D_QX_STATIC_BUILD=ON -D_QX_UNITY_BUILD=ON -DCMAKE_BUILD_TYPE=Debug -S . -B build_msvc -G "Visual Studio 17 2022"
+cmake --build build_msvc --config Debug -j 22
+cmake --install build_msvc --prefix "../QxOrm_1_5_0" --config Debug
+# GCC Debug Build
+cmake -D_QX_STATIC_BUILD=ON -D_QX_UNITY_BUILD=ON -DCMAKE_BUILD_TYPE=Debug -S . -B build
+cmake --build build --config Debug -j 22
+cmake --install build --prefix "../QxOrm_1_5_0" --config Debug
+```
+### 天坑
+
 ### 宏
 ```cpp
 // exprot.hpp
