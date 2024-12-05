@@ -24,7 +24,7 @@
 * 去读[GNU Coding Standards](https://www.gnu.org/prep/standards/)
 * 把vscode插件整理整理
 * 把chrome插件与网址整理整理
-
+* 有了常用电脑可以把微软的邮件客户端用起来。
 
 
 
