@@ -20,7 +20,10 @@
 * 线性代数 - OpenGL - OpenCV
 * gitmind中整理过来、还有其他笔记、幕布、WorkFlowy
 * 路由、nas
+  * OpenVPN
 * 去读[GNU Coding Standards](https://www.gnu.org/prep/standards/)
+* 把vscode插件整理整理
+* 把chrome插件与网址整理整理
 
 
 
