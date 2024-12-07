@@ -3,7 +3,6 @@
 *   记录每个demo中的过程或知识点
 *   doc文件夹是总结性的文档
 ## todo
-* plantuml 需要补充一个操作记录的文档。
 * learn_qxorm_manual 目前是mingw，改成msvc，并且总结一下。或让这个顶层项目适应mingw。
 * LearnOpenGL 缺笔记，需要整理。
 * 研究完QxOrm再来搞QxEntityEditor。
@@ -22,10 +21,9 @@
 * 路由、nas
   * OpenVPN
 * 去读[GNU Coding Standards](https://www.gnu.org/prep/standards/)
-* 把vscode插件整理整理
 * 把chrome插件与网址整理整理
 * 有了常用电脑可以把微软的邮件客户端用起来。
-
+* [深入敌后](https://www.zhihu.com/question/354025402/answer/893390494)
 
 
 ## Flex与Bison的尝试（flex_bison_demo）
