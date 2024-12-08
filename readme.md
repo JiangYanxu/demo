@@ -17,9 +17,16 @@
     *   C++ 日志库：`log4qt`; `log4cplus`; `log4cpp`
     *   OpenSSL、zlib、boost
 *   线性代数 - OpenGL - OpenCV
+    *    计算机图形学 Unity UE
 *   gitmind中整理过来、还有其他笔记、幕布、WorkFlowy
 *   路由、nas
     *   OpenVPN
+    *   OpenLDAP
+    *   研究一下手里两台2015年电脑的硬件配置。
+        *    视频解码能力（显卡相关）
+        *    网络能力
+        *    硬件配置
+        *    最好在研究研究内存种类，类型什么的。
 *   去读[GNU Coding Standards](https://www.gnu.org/prep/standards/)
 *   把chrome插件与网址整理整理
 *   有了常用电脑可以把微软的邮件客户端用起来。
